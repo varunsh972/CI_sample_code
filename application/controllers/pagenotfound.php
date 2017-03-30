@@ -1,0 +1,22 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+class Pagenotfound extends CI_Controller {
+
+    public function __construct() {
+        parent::__construct();
+    }
+
+    public function index() {
+        $this->output->set_status_header('404'); // setting header to 404
+        $this->load->view('pages/header');
+        $this->load->view('pages/404');
+        $this->load->view('pages/footer_js');
+        $this->load->view('pages/footer');
+    }
+
+}
+
+?> 
